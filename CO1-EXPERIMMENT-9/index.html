@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Keerthana | Network Protocol Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External Font - creates a Network request -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            K
+        </div>
+
+        <div>
+
+            <h2>KEERTHANA</h2>
+
+            <p>NETWORK LAB</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="student-info">
+
+        <span>B.Tech IT</span>
+
+        <span>II Year</span>
+
+        <span>SIMATS Engineering</span>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            WEB TECHNOLOGY • EXPERIMENT 09
+        </div>
+
+        <h1>
+            Observe the
+            <span>Web in Action.</span>
+        </h1>
+
+        <p>
+
+            Explore how browsers communicate with
+
+            web servers using the Developer Tools
+
+            Network panel.
+
+        </p>
+
+
+        <button class="start-btn"
+                onclick="startObservation()">
+
+            START NETWORK TEST →
+
+        </button>
+
+    </div>
+
+
+    <div class="network-animation">
+
+        <div class="orbit orbit-one"></div>
+
+        <div class="orbit orbit-two"></div>
+
+        <div class="network-core">
+
+            <div class="signal">
+                HTTP
+            </div>
+
+            <div class="signal small">
+                HTTPS
+            </div>
+
+            <div class="core-circle">
+                NET
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OBJECTIVE ================= -->
+
+<section class="objective">
+
+    <div class="section-label">
+        01 / OBJECTIVE
+    </div>
+
+
+    <div class="objective-content">
+
+        <h2>
+            What are we
+            <span>observing?</span>
+        </h2>
+
+
+        <p>
+
+            The browser Network panel records every
+
+            resource requested by a webpage. It helps
+
+            us understand URLs, protocols, request
+
+            methods, status codes, file types, sizes
+
+            and loading times.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= NETWORK ITEMS ================= -->
+
+<section class="request-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="section-label">
+                02 / REQUEST TYPES
+            </div>
+
+            <h2>
+                Generate Network
+                <span>Requests</span>
+            </h2>
+
+        </div>
+
+
+        <div class="live-indicator">
+
+            <span></span>
+            LIVE
+
+        </div>
+
+    </div>
+
+
+
+    <div class="request-grid">
+
+
+        <!-- GET REQUEST -->
+
+        <div class="request-card get-card">
+
+            <div class="card-top">
+
+                <div class="method get">
+                    GET
+                </div>
+
+                <div class="request-number">
+                    01
+                </div>
+
+            </div>
+
+
+            <h3>
+                Fetch Student Data
+            </h3>
+
+
+            <p>
+
+                Sends a GET request to retrieve
+
+                sample data from a web server.
+
+            </p>
+
+
+            <button onclick="sendGetRequest()">
+
+                SEND GET REQUEST
+
+            </button>
+
+
+            <div id="get-result"
+                 class="result">
+
+                Waiting...
+
+            </div>
+
+        </div>
+
+
+
+        <!-- POST REQUEST -->
+
+        <div class="request-card post-card">
+
+            <div class="card-top">
+
+                <div class="method post">
+                    POST
+                </div>
+
+                <div class="request-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <h3>
+                Submit Sample Data
+            </h3>
+
+
+            <p>
+
+                Sends sample student information
+
+                to demonstrate a POST request.
+
+            </p>
+
+
+            <button onclick="sendPostRequest()">
+
+                SEND POST REQUEST
+
+            </button>
+
+
+            <div id="post-result"
+                 class="result">
+
+                Waiting...
+
+            </div>
+
+        </div>
+
+
+
+        <!-- IMAGE REQUEST -->
+
+        <div class="request-card image-card">
+
+            <div class="card-top">
+
+                <div class="method image-method">
+                    IMAGE
+                </div>
+
+                <div class="request-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <h3>
+                Load an Image
+            </h3>
+
+
+            <p>
+
+                Loading an image creates a separate
+
+                network request visible in the panel.
+
+            </p>
+
+
+            <button onclick="loadImage()">
+
+                LOAD IMAGE
+
+            </button>
+
+
+            <div id="image-area"
+                 class="image-area">
+
+                Image will appear here
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EXTERNAL REQUEST -->
+
+        <div class="request-card external-card">
+
+            <div class="card-top">
+
+                <div class="method external">
+                    LINK
+                </div>
+
+                <div class="request-number">
+                    04
+                </div>
+
+            </div>
+
+
+            <h3>
+                Open External Resource
+            </h3>
+
+
+            <p>
+
+                Opens an external webpage and
+
+                demonstrates navigation requests.
+
+            </p>
+
+
+            <a href="https://developer.mozilla.org/"
+               target="_blank"
+               class="external-btn">
+
+                OPEN MDN →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OBSERVATION TABLE ================= -->
+
+<section class="observation">
+
+    <div class="section-label">
+        03 / OBSERVATION
+    </div>
+
+
+    <h2>
+        Network Panel
+        <span>Checklist</span>
+    </h2>
+
+
+    <p class="observation-intro">
+
+        Open Developer Tools → Network and reload
+
+        this webpage. Select any request to observe
+
+        its details.
+
+    </p>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Property</th>
+
+                    <th>What to Observe</th>
+
+                    <th>Example</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        <strong>URL</strong>
+                    </td>
+
+                    <td>
+                        Address of the requested resource
+                    </td>
+
+                    <td>
+                        index.html
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Protocol</strong>
+                    </td>
+
+                    <td>
+                        Communication protocol
+                    </td>
+
+                    <td>
+                        HTTPS
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Request Method</strong>
+                    </td>
+
+                    <td>
+                        Method used by the browser
+                    </td>
+
+                    <td>
+                        GET / POST
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Status Code</strong>
+                    </td>
+
+                    <td>
+                        Server response status
+                    </td>
+
+                    <td>
+                        200 OK
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>File Type</strong>
+                    </td>
+
+                    <td>
+                        Type of requested resource
+                    </td>
+
+                    <td>
+                        HTML / CSS / JS / Image
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Size</strong>
+                    </td>
+
+                    <td>
+                        Amount of data transferred
+                    </td>
+
+                    <td>
+                        KB
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Loading Time</strong>
+                    </td>
+
+                    <td>
+                        Time required to complete request
+                    </td>
+
+                    <td>
+                        milliseconds
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= NETWORK FLOW ================= -->
+
+<section class="flow-section">
+
+    <div class="section-label">
+        04 / NETWORK FLOW
+    </div>
+
+
+    <h2>
+        How a Web Request
+        <span>Travels</span>
+    </h2>
+
+
+    <div class="flow">
+
+        <div class="flow-box browser">
+
+            <div class="flow-icon">
+                01
+            </div>
+
+            <h3>
+                Browser
+            </h3>
+
+            <p>
+                User requests a webpage
+            </p>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="flow-box request">
+
+            <div class="flow-icon">
+                02
+            </div>
+
+            <h3>
+                HTTP Request
+            </h3>
+
+            <p>
+                GET / POST request
+            </p>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="flow-box server">
+
+            <div class="flow-icon">
+                03
+            </div>
+
+            <h3>
+                Web Server
+            </h3>
+
+            <p>
+                Processes the request
+            </p>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="flow-box response">
+
+            <div class="flow-icon">
+                04
+            </div>
+
+            <h3>
+                Response
+            </h3>
+
+            <p>
+                Status + Data returned
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DEVELOPER TOOLS ================= -->
+
+<section class="devtools">
+
+    <div class="devtools-content">
+
+        <div class="section-label">
+            05 / PRACTICAL STEP
+        </div>
+
+
+        <h2>
+            Open Browser
+            <span>Developer Tools</span>
+        </h2>
+
+
+        <ol>
+
+            <li>
+                Open this webpage in Chrome.
+            </li>
+
+            <li>
+                Press <strong>F12</strong> or
+                <strong>Ctrl + Shift + I</strong>.
+            </li>
+
+            <li>
+                Select the <strong>Network</strong>
+                tab.
+            </li>
+
+            <li>
+                Press <strong>Ctrl + R</strong>
+                to reload the webpage.
+            </li>
+
+            <li>
+                Click a request and observe its
+                details.
+            </li>
+
+        </ol>
+
+    </div>
+
+
+    <div class="devtools-box">
+
+        <div class="window-bar">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+        <div class="fake-network">
+
+            <div>
+                <b>Name</b>
+                <b>Status</b>
+                <b>Type</b>
+            </div>
+
+            <div>
+                index.html
+                <em>200</em>
+                document
+            </div>
+
+            <div>
+                style.css
+                <em>200</em>
+                stylesheet
+            </div>
+
+            <div>
+                script.js
+                <em>200</em>
+                script
+            </div>
+
+            <div>
+                image
+                <em>200</em>
+                image
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-name">
+        KEERTHANA<span>.</span>
+    </div>
+
+
+    <p>
+        B.Tech Information Technology • II Year
+    </p>
+
+
+    <p>
+        SIMATS Engineering
+    </p>
+
+
+    <div class="footer-line"></div>
+
+
+    <small>
+        Web Technology Laboratory | Experiment 09
+    </small>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
