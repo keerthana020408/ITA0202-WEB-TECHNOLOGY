@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #F7F1E8;
+    color: #292522;
+}
+
+
+/* Header */
+
+header {
+    background: #292522;
+    color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 45px;
+}
+
+header h1 {
+    margin: 0;
+    color: #F28C28;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #E8DED0;
+}
+
+
+/* Introduction */
+
+.intro {
+    text-align: center;
+    padding: 30px 20px 15px;
+}
+
+.intro h2 {
+    color: #C75B12;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* Main Container */
+
+.container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* Form Cards */
+
+.form-card {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(41, 37, 34, 0.12);
+    border-top: 6px solid #F28C28;
+}
+
+.post-card {
+    border-top-color: #4E7A57;
+}
+
+
+/* Card Title */
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-title span {
+    font-size: 30px;
+}
+
+.card-title h2 {
+    margin: 0;
+    color: #C75B12;
+}
+
+.post-card .card-title h2 {
+    color: #4E7A57;
+}
+
+
+.description {
+    color: #6E665E;
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D6CCC0;
+    border-radius: 7px;
+    background: #FCFAF7;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #F28C28;
+    box-shadow: 0 0 5px rgba(242, 140, 40, 0.25);
+}
+
+
+/* Buttons */
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #F28C28;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #D96F10;
+    transform: translateY(-2px);
+}
+
+
+/* POST Button */
+
+.post-card button {
+    background: #4E7A57;
+}
+
+.post-card button:hover {
+    background: #3D6245;
+}
+
+
+/* Information Box */
+
+.info-box {
+    margin-top: 20px;
+    padding: 14px;
+    background: #FFF3E3;
+    border-left: 4px solid #F28C28;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+.post-card .info-box {
+    background: #EDF5EE;
+    border-left-color: #4E7A57;
+}
+
+
+/* Comparison */
+
+.comparison {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(41, 37, 34, 0.12);
+}
+
+.comparison h2 {
+    text-align: center;
+    color: #C75B12;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #D6CCC0;
+    padding: 13px;
+    text-align: center;
+}
+
+th {
+    background: #292522;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #FFF8EF;
+}
+
+
+/* JavaScript Message */
+
+#message {
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background: #292522;
+    color: #E8DED0;
+}
+
+
+/* Responsive */
+
+@media (max-width: 750px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+
+    .comparison {
+        margin: 20px 10px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
