@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="style.css"?>
+
+<students>
+
+    <student>
+        <rollNumber>101</rollNumber>
+        <name>Keerthana</name>
+        <department>Computer Science</department>
+        <year>II</year>
+        <email>keerthana@example.com</email>
+        <mobile>9876543210</mobile>
+    </student>
+
+    <student>
+        <rollNumber>102</rollNumber>
+        <name>Ananya</name>
+        <department>Information Technology</department>
+        <year>II</year>
+        <email>ananya@example.com</email>
+        <mobile>9876543211</mobile>
+    </student>
+
+    <student>
+        <rollNumber>103</rollNumber>
+        <name>Priya</name>
+        <department>Computer Science</department>
+        <year>II</year>
+        <email>priya@example.com</email>
+        <mobile>9876543212</mobile>
+    </student>
+
+    <student>
+        <rollNumber>104</rollNumber>
+        <name>Divya</name>
+        <department>Artificial Intelligence</department>
+        <year>II</year>
+        <email>divya@example.com</email>
+        <mobile>9876543213</mobile>
+    </student>
+
+    <student>
+        <rollNumber>105</rollNumber>
+        <name>Harini</name>
+        <department>Data Science</department>
+        <year>II</year>
+        <email>harini@example.com</email>
+        <mobile>9876543214</mobile>
+    </student>
+
+</students>

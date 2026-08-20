@@ -1,0 +1,140 @@
+students {
+    display: block;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+students::before {
+    content: "🎓 STUDENT INFORMATION SYSTEM";
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+students::after {
+    content: "Web Technology Laboratory • XML Student Records";
+    display: block;
+    text-align: center;
+    color: #eeeeee;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+student {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 2fr 0.8fr 2.5fr 1.5fr;
+    background: white;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-bottom: 1px solid #dddddd;
+}
+
+student:first-of-type {
+    border-radius: 15px 15px 0 0;
+}
+
+student:last-of-type {
+    border-radius: 0 0 15px 15px;
+}
+
+student:hover {
+    background: #f1efff;
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+rollNumber,
+name,
+department,
+year,
+email,
+mobile {
+    display: block;
+    padding: 18px 12px;
+    text-align: center;
+    color: #333333;
+    border-right: 1px solid #eeeeee;
+}
+
+student:first-of-type::before {
+    content: "ROLL NUMBER";
+    display: block;
+    padding: 18px 12px;
+    background: #433878;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    grid-column: 1;
+}
+
+student:first-of-type rollNumber {
+    background: #433878;
+    color: white;
+    font-weight: bold;
+}
+
+student:first-of-type name {
+    background: #433878;
+    color: white;
+    font-weight: bold;
+}
+
+student:first-of-type department {
+    background: #433878;
+    color: white;
+    font-weight: bold;
+}
+
+student:first-of-type year {
+    background: #433878;
+    color: white;
+    font-weight: bold;
+}
+
+student:first-of-type email {
+    background: #433878;
+    color: white;
+    font-weight: bold;
+}
+
+student:first-of-type mobile {
+    background: #433878;
+    color: white;
+    font-weight: bold;
+}
+
+rollNumber::before {
+    content: "Roll No. ";
+    font-weight: bold;
+}
+
+name::before {
+    content: "Name: ";
+    font-weight: bold;
+}
+
+department::before {
+    content: "Department: ";
+    font-weight: bold;
+}
+
+year::before {
+    content: "Year: ";
+    font-weight: bold;
+}
+
+email::before {
+    content: "Email: ";
+    font-weight: bold;
+}
+
+mobile::before {
+    content: "Mobile: ";
+    font-weight: bold;
+}
