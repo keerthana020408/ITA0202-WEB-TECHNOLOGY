@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #E8F3EF, #FAF8F3);
+    color: #3E3A36;
+}
+
+
+/* Header */
+
+.header {
+    background: linear-gradient(135deg, #176B5B, #2E8B76);
+    color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+    font-size: 45px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header p {
+    margin: 5px 0 0;
+}
+
+
+/* Main Container */
+
+.container {
+    max-width: 950px;
+    margin: 35px auto;
+    background-color: #FFFFFF;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(62, 58, 54, 0.15);
+}
+
+
+/* Form Heading */
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-heading h2 {
+    color: #176B5B;
+    margin-bottom: 5px;
+}
+
+.form-heading p {
+    color: #77716B;
+}
+
+
+/* Section Headings */
+
+h3 {
+    margin-top: 30px;
+    padding: 12px;
+    background-color: #E8F3EF;
+    color: #176B5B;
+    border-left: 5px solid #2E8B76;
+    border-radius: 5px;
+}
+
+
+/* Row */
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* Input Group */
+
+.input-group {
+    margin-top: 18px;
+}
+
+.input-group > label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+
+/* Input Fields */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #C8D6D1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background-color: #FEFEFC;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #176B5B;
+    box-shadow: 0 0 5px rgba(23, 107, 91, 0.25);
+}
+
+
+/* Radio Buttons and Checkboxes */
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.options label {
+    font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #176B5B;
+}
+
+
+/* File Upload */
+
+input[type="file"] {
+    padding: 10px;
+    border: 1px dashed #8AAFA4;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #FAFDFB;
+}
+
+
+/* Password Strength */
+
+.strength {
+    width: 100%;
+    height: 6px;
+    background-color: #E1E6E3;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+#strengthBar {
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    background-color: #176B5B;
+}
+
+#strengthText {
+    color: #77716B;
+}
+
+
+/* Terms */
+
+.terms {
+    margin-top: 25px;
+}
+
+.terms label {
+    font-weight: normal;
+}
+
+.terms a {
+    color: #176B5B;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 13px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* Register Button */
+
+.submit-btn {
+    background-color: #176B5B;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #125448;
+    transform: translateY(-2px);
+}
+
+
+/* Reset Button */
+
+.reset-btn {
+    background-color: #E3DED5;
+    color: #3E3A36;
+}
+
+.reset-btn:hover {
+    background-color: #D5CEC3;
+    transform: translateY(-2px);
+}
+
+
+/* Success / Error Message */
+
+#result {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #77716B;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 700px) {
+
+    .container {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
