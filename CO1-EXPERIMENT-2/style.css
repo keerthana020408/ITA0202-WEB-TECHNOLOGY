@@ -1,0 +1,582 @@
+/* =========================================
+   STUDENT PROFILE - EXPERIMENT 2
+   Beautiful Colorful CSS Design
+========================================= */
+
+
+/* ---------- Basic Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ffb6d9 0%, transparent 25%),
+        radial-gradient(circle at 90% 10%, #b9c7ff 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, #c7f9e9 0%, transparent 25%),
+        linear-gradient(135deg, #fff0f7, #eef2ff, #ecfff8);
+
+    min-height: 100vh;
+}
+
+
+/* ---------- Navigation Bar ---------- */
+
+nav {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 25px auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(80, 70, 150, 0.15);
+
+    position: sticky;
+    top: 15px;
+
+    z-index: 100;
+}
+
+nav div:first-child {
+    font-size: 22px;
+    font-weight: bold;
+
+    background: linear-gradient(
+        90deg,
+        #ff4f9a,
+        #7b61ff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav div:last-child {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff4f9a;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Main Container ---------- */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+}
+
+
+/* ---------- All Sections ---------- */
+
+main section {
+    background: rgba(255, 255, 255, 0.88);
+
+    margin-bottom: 30px;
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(80, 70, 150, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    transition: 0.3s;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(80, 70, 150, 0.18);
+}
+
+
+/* ---------- Profile Section ---------- */
+
+#profile {
+    text-align: center;
+
+    padding: 60px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 239, 248, 0.95)
+        );
+}
+
+
+/* Profile Emoji Circle */
+
+#profile > div {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 80px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7eb3,
+            #8b7cff
+        );
+
+    box-shadow:
+        0 10px 30px rgba(255, 90, 160, 0.35);
+
+    border: 8px solid white;
+}
+
+
+/* Profile Heading */
+
+#profile h1 {
+    font-size: 45px;
+
+    margin-bottom: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4081,
+            #7b61ff
+        );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#profile h2 {
+    color: #625b8f;
+
+    font-size: 20px;
+
+    margin-bottom: 18px;
+}
+
+#profile p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ---------- Section Headings ---------- */
+
+main section > h2 {
+    color: #5c4db1;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 3px solid transparent;
+
+    border-image:
+        linear-gradient(
+            90deg,
+            #ff65a3,
+            #806cff
+        ) 1;
+}
+
+
+/* ---------- Description List ---------- */
+
+dl {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+dl div {
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff2f8,
+            #f1efff
+        );
+}
+
+dt {
+    color: #8b5cf6;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+}
+
+dd {
+    color: #444;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* ---------- Unordered List - Skills ---------- */
+
+#skills ul {
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+#skills li {
+    padding: 22px;
+
+    text-align: center;
+
+    color: white;
+
+    font-weight: bold;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5f9e,
+            #8b6cff
+        );
+
+    box-shadow:
+        0 8px 20px rgba(130, 90, 200, 0.2);
+
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    transform: translateY(-8px) scale(1.03);
+
+    box-shadow:
+        0 15px 30px rgba(130, 90, 200, 0.3);
+}
+
+
+/* ---------- Ordered List - Education ---------- */
+
+#education ol {
+    padding-left: 25px;
+
+    counter-reset: education;
+}
+
+#education li {
+    margin-bottom: 15px;
+
+    padding: 18px 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff0f7,
+            #f1efff
+        );
+
+    color: #4c4670;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+#education li:hover {
+    transform: translateX(8px);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffd6e8,
+            #ddd8ff
+        );
+}
+
+
+/* ---------- Nested List ---------- */
+
+#subjects > ul {
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+#subjects > ul > li {
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fdf0ff,
+            #edf2ff
+        );
+
+    border-left: 5px solid #ff62a5;
+
+    font-weight: bold;
+
+    color: #5a4e91;
+
+    transition: 0.3s;
+}
+
+#subjects > ul > li:hover {
+    transform: translateY(-5px);
+
+    border-left-color: #7564ff;
+}
+
+
+/* Inner Nested Lists */
+
+#subjects ul ul {
+    margin-top: 15px;
+
+    padding-left: 20px;
+
+    color: #666;
+}
+
+#subjects ul ul li {
+    margin: 10px 0;
+
+    font-weight: normal;
+
+    list-style-type: circle;
+}
+
+
+/* ---------- Hyperlinks ---------- */
+
+#links {
+    text-align: center;
+}
+
+#links p {
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+#links a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: bold;
+
+    padding: 15px 25px;
+
+    margin: 8px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5f9e,
+            #7564ff
+        );
+
+    box-shadow:
+        0 8px 20px rgba(120, 90, 200, 0.2);
+
+    transition: 0.3s;
+}
+
+#links a:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(120, 90, 200, 0.3);
+}
+
+
+/* ---------- Conclusion ---------- */
+
+main section:last-child {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6fae,
+            #7768ff
+        );
+
+    color: white;
+}
+
+main section:last-child h2 {
+    color: white;
+
+    border-image: none;
+
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+}
+
+main section:last-child p {
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #28234d,
+            #151329
+        );
+
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 850px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav div:last-child {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    #skills ul,
+    #subjects > ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+    }
+
+    main section {
+        padding: 25px 20px;
+    }
+
+    #profile h1 {
+        font-size: 34px;
+    }
+
+    #profile h2 {
+        font-size: 17px;
+    }
+
+    dl {
+        grid-template-columns: 1fr;
+    }
+
+    #skills ul,
+    #subjects > ul {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        width: 94%;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+}
