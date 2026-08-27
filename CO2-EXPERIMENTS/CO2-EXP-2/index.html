@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | Keerthana L</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                ✨ STUDENT HUB
+            </div>
+
+            <div class="student-info">
+                B.Tech IT • 2nd Year
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN SECTION ================= -->
+
+    <main>
+
+        <div class="registration-container">
+
+
+            <!-- LEFT INFORMATION PANEL -->
+
+            <section class="info-panel">
+
+                <div class="info-icon">
+                    🎓
+                </div>
+
+                <h1>
+                    Student<br>
+                    Registration
+                </h1>
+
+                <p>
+                    Create your student profile by entering
+                    your details in the registration form.
+                </p>
+
+
+                <div class="feature-list">
+
+                    <div class="feature">
+                        <span>✓</span>
+                        <p>Easy Registration</p>
+                    </div>
+
+                    <div class="feature">
+                        <span>✓</span>
+                        <p>Secure Validation</p>
+                    </div>
+
+                    <div class="feature">
+                        <span>✓</span>
+                        <p>Responsive Design</p>
+                    </div>
+
+                    <div class="feature">
+                        <span>✓</span>
+                        <p>Instant Feedback</p>
+                    </div>
+
+                </div>
+
+
+                <div class="student-badge">
+
+                    <strong>
+                        KEERTHANA L
+                    </strong>
+
+                    <span>
+                        B.Tech Information Technology
+                    </span>
+
+                    <span>
+                        SIMATS Engineering
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RIGHT FORM PANEL -->
+
+            <section class="form-panel">
+
+                <div class="form-heading">
+
+                    <span>
+                        📝
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Registration Form
+                        </h2>
+
+                        <p>
+                            Fill in your details carefully
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form id="registrationForm">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                        >
+
+                        <small id="nameError"></small>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="email"
+                            placeholder="example@gmail.com"
+                        >
+
+                        <small id="emailError"></small>
+
+                    </div>
+
+
+
+                    <!-- MOBILE -->
+
+                    <div class="form-group">
+
+                        <label for="mobile">
+                            Mobile Number
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="mobile"
+                            placeholder="Enter 10-digit mobile number"
+                            maxlength="10"
+                        >
+
+                        <small id="mobileError"></small>
+
+                    </div>
+
+
+
+                    <!-- DATE OF BIRTH -->
+
+                    <div class="form-group">
+
+                        <label for="dob">
+                            Date of Birth
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                        >
+
+                        <small id="dobError"></small>
+
+                    </div>
+
+
+
+                    <!-- GENDER -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Gender
+                            <span>*</span>
+                        </label>
+
+                        <div class="radio-group">
+
+                            <label class="radio-label">
+
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Female"
+                                >
+
+                                Female
+
+                            </label>
+
+
+                            <label class="radio-label">
+
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Male"
+                                >
+
+                                Male
+
+                            </label>
+
+
+                            <label class="radio-label">
+
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Other"
+                                >
+
+                                Other
+
+                            </label>
+
+                        </div>
+
+                        <small id="genderError"></small>
+
+                    </div>
+
+
+
+                    <!-- DEPARTMENT -->
+
+                    <div class="form-group">
+
+                        <label for="department">
+                            Department
+                            <span>*</span>
+                        </label>
+
+                        <select id="department">
+
+                            <option value="">
+                                Select Department
+                            </option>
+
+                            <option value="Information Technology">
+                                Information Technology
+                            </option>
+
+                            <option value="Computer Science">
+                                Computer Science
+                            </option>
+
+                            <option value="Artificial Intelligence">
+                                Artificial Intelligence
+                            </option>
+
+                            <option value="Electronics">
+                                Electronics
+                            </option>
+
+                            <option value="Mechanical">
+                                Mechanical
+                            </option>
+
+                        </select>
+
+                        <small id="departmentError"></small>
+
+                    </div>
+
+
+
+                    <!-- YEAR -->
+
+                    <div class="form-group">
+
+                        <label for="year">
+                            Year of Study
+                            <span>*</span>
+                        </label>
+
+                        <select id="year">
+
+                            <option value="">
+                                Select Year
+                            </option>
+
+                            <option value="1st Year">
+                                1st Year
+                            </option>
+
+                            <option value="2nd Year">
+                                2nd Year
+                            </option>
+
+                            <option value="3rd Year">
+                                3rd Year
+                            </option>
+
+                            <option value="4th Year">
+                                4th Year
+                            </option>
+
+                        </select>
+
+                        <small id="yearError"></small>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create a strong password"
+                        >
+
+                        <small id="passwordError"></small>
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Re-enter your password"
+                        >
+
+                        <small id="confirmPasswordError"></small>
+
+                    </div>
+
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="form-group">
+
+                        <label for="address">
+                            Address
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="address"
+                            rows="3"
+                            placeholder="Enter your address"
+                        ></textarea>
+
+                        <small id="addressError"></small>
+
+                    </div>
+
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                            >
+
+                            I agree to the Terms & Conditions.
+
+                        </label>
+
+                        <small id="termsError"></small>
+
+                    </div>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="button-group">
+
+                        <button
+                            type="submit"
+                            class="register-btn"
+                        >
+                            ✓ Register Now
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="reset-btn"
+                            id="resetButton"
+                        >
+                            ↻ Reset
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <div
+                    id="successMessage"
+                    class="success-message"
+                >
+
+                    <div class="success-icon">
+                        🎉
+                    </div>
+
+                    <h3>
+                        Registration Successful!
+                    </h3>
+
+                    <p>
+                        Welcome to Student Hub, Keerthana!
+                    </p>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Keerthana L | B.Tech IT | SIMATS Engineering
+        </p>
+
+    </footer>
+
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>

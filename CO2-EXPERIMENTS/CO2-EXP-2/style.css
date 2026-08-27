@@ -1,0 +1,835 @@
+/* =====================================================
+   EXPERIMENT 2
+   STUDENT REGISTRATION FORM WITH VALIDATION
+===================================================== */
+
+
+/* ================= UNIVERSAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #d8c4ff,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #bdefff,
+            transparent 30%
+        ),
+        #f6f7ff;
+
+    color: #25243a;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background:
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    padding: 18px 8%;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.header-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* Logo */
+
+.logo {
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* Student Information */
+
+.student-info {
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    padding: 8px 18px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+}
+
+
+/* ================= MAIN ================= */
+
+main {
+    padding: 60px 6%;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.registration-container {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 35% 65%;
+
+    background: white;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(62, 45, 120, 0.18);
+}
+
+
+/* ================= LEFT PANEL ================= */
+
+.info-panel {
+    padding: 50px 40px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            #6a11cb,
+            #2575fc,
+            #00b4db
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Decorative Circle */
+
+.info-panel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    top: -80px;
+    right: -90px;
+}
+
+
+.info-panel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    bottom: -70px;
+    left: -70px;
+}
+
+
+/* Icon */
+
+.info-icon {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    font-size: 38px;
+
+    margin-bottom: 25px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Heading */
+
+.info-panel h1 {
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Paragraph */
+
+.info-panel > p {
+    color: #edf3ff;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ================= FEATURES ================= */
+
+.feature-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.feature span {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+
+.feature p {
+    font-size: 14px;
+
+    color: white;
+}
+
+
+/* ================= STUDENT BADGE ================= */
+
+.student-badge {
+    margin-top: 40px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.13);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.student-badge strong {
+    font-size: 16px;
+}
+
+
+.student-badge span {
+    font-size: 12px;
+
+    color: #e9f0ff;
+}
+
+
+/* ================= FORM PANEL ================= */
+
+.form-panel {
+    padding: 45px 50px;
+}
+
+
+/* ================= FORM HEADING ================= */
+
+.form-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.form-heading > span {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee5ff,
+            #e4f1ff
+        );
+
+    font-size: 27px;
+}
+
+
+.form-heading h2 {
+    font-size: 27px;
+
+    color: #292646;
+}
+
+
+.form-heading p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* ================= FORM ================= */
+
+form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px 20px;
+}
+
+
+/* Form Group */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Full Width Groups */
+
+.form-group:nth-child(10),
+.form-group:nth-child(11) {
+    grid-column: 1 / -1;
+}
+
+
+/* Labels */
+
+.form-group label {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+
+    color: #3c3956;
+}
+
+
+.form-group label span {
+    color: #ff4f81;
+}
+
+
+/* Inputs */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 2px solid #e9e8f2;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    color: #333;
+
+    background: #fafaff;
+
+    transition: 0.3s;
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6a11cb;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(106, 17, 203, 0.08);
+}
+
+
+/* Textarea */
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* Error */
+
+.form-group small,
+.terms small {
+    color: #e53935;
+
+    font-size: 11px;
+
+    margin-top: 4px;
+
+    min-height: 15px;
+}
+
+
+/* ================= RADIO ================= */
+
+.radio-group {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+    min-height: 44px;
+}
+
+
+.radio-label {
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-weight: 400 !important;
+
+    margin: 0 !important;
+}
+
+
+.radio-label input {
+    width: auto !important;
+
+    accent-color: #6a11cb;
+}
+
+
+/* ================= TERMS ================= */
+
+.terms {
+    grid-column: 1 / -1;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #f8f7ff;
+}
+
+
+.terms label {
+    font-size: 12px;
+
+    color: #555;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.terms input {
+    accent-color: #6a11cb;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.button-group {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 5px;
+}
+
+
+.register-btn,
+.reset-btn {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 12px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Register */
+
+.register-btn {
+    flex: 1;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    box-shadow:
+        0 8px 20px rgba(37, 117, 252, 0.25);
+}
+
+
+.register-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 117, 252, 0.35);
+}
+
+
+/* Reset */
+
+.reset-btn {
+    color: #6a11cb;
+
+    background: #eeeaff;
+
+    min-width: 110px;
+}
+
+
+.reset-btn:hover {
+    background: #ddd4ff;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= SUCCESS MESSAGE ================= */
+
+.success-message {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7fff2,
+            #e8f7ff
+        );
+
+    border:
+        2px solid #bcefd2;
+}
+
+
+.success-message.show {
+    display: block;
+
+    animation:
+        successAnimation 0.5s ease;
+}
+
+
+@keyframes successAnimation {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.success-icon {
+    font-size: 40px;
+
+    margin-bottom: 8px;
+}
+
+
+.success-message h3 {
+    color: #168a4b;
+
+    font-size: 20px;
+}
+
+
+.success-message p {
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .registration-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-panel {
+        padding: 40px;
+    }
+
+
+    .info-panel h1 {
+        font-size: 34px;
+    }
+
+
+    .form-panel {
+        padding: 40px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+
+    .header-content {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .student-info {
+        font-size: 11px;
+    }
+
+
+    main {
+        padding: 30px 4%;
+    }
+
+
+    .registration-container {
+        border-radius: 20px;
+    }
+
+
+    .info-panel {
+        padding: 35px 25px;
+    }
+
+
+    .info-panel h1 {
+        font-size: 30px;
+    }
+
+
+    .form-panel {
+        padding: 30px 20px;
+    }
+
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-group:nth-child(10),
+    .form-group:nth-child(11),
+    .terms,
+    .button-group {
+        grid-column: auto;
+    }
+
+
+    .button-group {
+        flex-direction: column;
+    }
+
+
+    .register-btn,
+    .reset-btn {
+        width: 100%;
+    }
+
+
+    .radio-group {
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+}
