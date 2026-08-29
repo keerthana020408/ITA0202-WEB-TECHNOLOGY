@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Event Registration</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <h2>EventSphere</h2>
+
+                    <p>INTERACTIVE EVENT REGISTRATION</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-tag">
+
+                Keerthana L | B.Tech IT
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div>
+
+                <span class="badge">
+                    ✨ CO3 • EXPERIMENT 3
+                </span>
+
+                <h1>
+                    Interactive Event
+                    <span>Registration</span>
+                </h1>
+
+                <p>
+
+                    Experience JavaScript events through
+                    an interactive registration form.
+
+                </p>
+
+            </div>
+
+
+            <div class="hero-icon">
+                🎉
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= REGISTRATION CARD ================= -->
+
+        <section class="registration-card">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        📝 EVENT REGISTRATION
+                    </span>
+
+                    <h2>
+                        Register for an Event
+                    </h2>
+
+                </div>
+
+
+                <div class="event-symbol">
+                    ✦
+                </div>
+
+            </div>
+
+
+
+            <form id="eventForm">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your name"
+                        onfocus="showEvent('Focus event: Name field selected')"
+                        onblur="showEvent('Blur event: Name field left')"
+                        oninput="updatePreview()">
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        onfocus="showEvent('Focus event: Email field selected')"
+                        onblur="showEvent('Blur event: Email field left')">
+
+                </div>
+
+
+
+                <!-- EVENT -->
+
+                <div class="form-group">
+
+                    <label>
+                        Select Event
+                    </label>
+
+                    <select
+                        id="eventName">
+
+                        <option value="">
+                            Choose an event
+                        </option>
+
+                        <option value="Web Development Workshop">
+                            Web Development Workshop
+                        </option>
+
+                        <option value="Cloud Computing Seminar">
+                            Cloud Computing Seminar
+                        </option>
+
+                        <option value="Coding Challenge">
+                            Coding Challenge
+                        </option>
+
+                        <option value="Project Expo">
+                            Project Expo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- CATEGORY -->
+
+                <div class="form-group">
+
+                    <label>
+                        Participant Category
+                    </label>
+
+                    <select id="category">
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option>
+                            Student
+                        </option>
+
+                        <option>
+                            Faculty
+                        </option>
+
+                        <option>
+                            Guest
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    id="registerButton"
+                    class="register-btn"
+                    onmouseover="showEvent('Mouseover event: Register button')"
+                    onmouseout="showEvent('Mouseout event: Register button')"
+                    onclick="buttonClicked()">
+
+                    🎟 Register Now
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- ================= PREVIEW ================= -->
+
+        <section class="preview-card">
+
+
+            <div class="preview-heading">
+
+                <div>
+
+                    <span>
+                        👤 LIVE PREVIEW
+                    </span>
+
+                    <h2>
+                        Participant Preview
+                    </h2>
+
+                </div>
+
+                <div class="live">
+                    ● LIVE
+                </div>
+
+            </div>
+
+
+
+            <div class="preview-content">
+
+
+                <div class="avatar"
+                     id="avatar">
+
+                    KL
+
+                </div>
+
+
+                <div>
+
+                    <h3 id="previewName">
+                        Your Name
+                    </h3>
+
+                    <p id="previewEvent">
+                        Select an event to continue
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= EVENT MONITOR ================= -->
+
+        <section class="monitor-card">
+
+
+            <div class="monitor-header">
+
+                <div>
+
+                    <span>
+                        ⚡ EVENT MONITOR
+                    </span>
+
+                    <h2>
+                        JavaScript Event Activity
+                    </h2>
+
+                </div>
+
+
+                <div class="js-icon">
+                    JS
+                </div>
+
+            </div>
+
+
+            <div class="event-display"
+                 id="eventDisplay">
+
+                Waiting for an event...
+
+            </div>
+
+
+            <div class="event-grid">
+
+
+                <div class="event-box">
+
+                    <strong>
+                        onclick
+                    </strong>
+
+                    <span>
+                        Button click
+                    </span>
+
+                </div>
+
+
+                <div class="event-box">
+
+                    <strong>
+                        input
+                    </strong>
+
+                    <span>
+                        Text typing
+                    </span>
+
+                </div>
+
+
+                <div class="event-box">
+
+                    <strong>
+                        focus
+                    </strong>
+
+                    <span>
+                        Field selected
+                    </span>
+
+                </div>
+
+
+                <div class="event-box">
+
+                    <strong>
+                        blur
+                    </strong>
+
+                    <span>
+                        Field left
+                    </span>
+
+                </div>
+
+
+                <div class="event-box">
+
+                    <strong>
+                        mouseover
+                    </strong>
+
+                    <span>
+                        Mouse enters
+                    </span>
+
+                </div>
+
+
+                <div class="event-box">
+
+                    <strong>
+                        mouseout
+                    </strong>
+
+                    <span>
+                        Mouse leaves
+                    </span>
+
+                </div>
+
+
+                <div class="event-box">
+
+                    <strong>
+                        change
+                    </strong>
+
+                    <span>
+                        Selection changed
+                    </span>
+
+                </div>
+
+
+                <div class="event-box">
+
+                    <strong>
+                        submit
+                    </strong>
+
+                    <span>
+                        Form submitted
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OUTPUT -->
+
+        <section class="output-card">
+
+            <div class="output-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <span>
+                    REGISTRATION STATUS
+                </span>
+
+                <p id="statusMessage">
+
+                    Complete the form to register.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Keerthana L |
+            B.Tech Information Technology |
+            SIMATS Engineering
+
+        </p>
+
+        <span>
+            CO3 • Interactive Event Registration Using JavaScript Events
+        </span>
+
+    </footer>
+
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>
