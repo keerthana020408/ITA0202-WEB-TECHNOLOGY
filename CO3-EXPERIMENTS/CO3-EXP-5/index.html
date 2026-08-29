@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Browser History Manager</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="header-content">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🧭
+            </div>
+
+            <div>
+
+                <h2>HistoryHub</h2>
+
+                <p>JAVASCRIPT BROWSER HISTORY MANAGER</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="student-tag">
+
+            Keerthana L | B.Tech IT | 2nd Year
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+
+            <span class="badge">
+                ✨ CO3 • EXPERIMENT 5
+            </span>
+
+            <h1>
+
+                Browser History
+                <span>Manager</span>
+
+            </h1>
+
+            <p>
+
+                Explore browser navigation using the
+                JavaScript History Object.
+
+            </p>
+
+        </div>
+
+
+        <div class="hero-icon">
+            🕘
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CURRENT PAGE ================= -->
+
+    <section class="current-card">
+
+        <div class="current-icon">
+            📄
+        </div>
+
+        <div>
+
+            <span>CURRENT PAGE</span>
+
+            <h2 id="currentPage">
+                History Dashboard
+            </h2>
+
+            <p id="pageInfo">
+                Browser history is ready to manage.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HISTORY CONTROLS ================= -->
+
+    <section class="history-card">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    🧭 NAVIGATION CONTROLS
+                </span>
+
+                <h2>
+                    Manage Browser History
+                </h2>
+
+            </div>
+
+
+            <div class="history-symbol">
+                ↔
+            </div>
+
+        </div>
+
+
+
+        <div class="button-grid">
+
+
+            <button
+                class="history-btn back"
+                onclick="goBack()">
+
+                <strong>←</strong>
+
+                <span>
+                    Go Back
+                </span>
+
+                <small>
+                    history.back()
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="history-btn forward"
+                onclick="goForward()">
+
+                <strong>→</strong>
+
+                <span>
+                    Go Forward
+                </span>
+
+                <small>
+                    history.forward()
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="history-btn refresh"
+                onclick="reloadPage()">
+
+                <strong>↻</strong>
+
+                <span>
+                    Reload Page
+                </span>
+
+                <small>
+                    location.reload()
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="history-btn length"
+                onclick="showHistoryLength()">
+
+                <strong>🔢</strong>
+
+                <span>
+                    History Length
+                </span>
+
+                <small>
+                    history.length
+                </small>
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HISTORY INFORMATION ================= -->
+
+    <section class="info-grid">
+
+
+        <!-- HISTORY OBJECT -->
+
+        <div class="info-card">
+
+            <div class="card-title">
+
+                <div class="card-icon">
+                    🗂️
+                </div>
+
+                <div>
+
+                    <span>HISTORY OBJECT</span>
+
+                    <h2>
+                        History Information
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>
+                    History Length
+                </span>
+
+                <strong id="historyLength">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>
+                    Current URL
+                </span>
+
+                <strong id="currentURL">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>
+                    Navigation Status
+                </span>
+
+                <strong id="navigationStatus">
+                    Ready
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- METHODS -->
+
+        <div class="info-card">
+
+            <div class="card-title">
+
+                <div class="card-icon">
+                    ⚙️
+                </div>
+
+                <div>
+
+                    <span>METHODS USED</span>
+
+                    <h2>
+                        JavaScript Methods
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="method">
+
+                <code>
+                    history.back()
+                </code>
+
+                <span>
+                    Moves one page backward
+                </span>
+
+            </div>
+
+
+            <div class="method">
+
+                <code>
+                    history.forward()
+                </code>
+
+                <span>
+                    Moves one page forward
+                </span>
+
+            </div>
+
+
+            <div class="method">
+
+                <code>
+                    history.length
+                </code>
+
+                <span>
+                    Returns history entries
+                </span>
+
+            </div>
+
+
+            <div class="method">
+
+                <code>
+                    location.reload()
+                </code>
+
+                <span>
+                    Reloads the current page
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= EVENT MONITOR ================= -->
+
+    <section class="monitor-card">
+
+        <div class="monitor-header">
+
+            <div>
+
+                <span>
+                    ⚡ NAVIGATION MONITOR
+                </span>
+
+                <h2>
+                    Browser History Activity
+                </h2>
+
+            </div>
+
+
+            <div class="live">
+                ● ACTIVE
+            </div>
+
+        </div>
+
+
+        <div class="monitor-message"
+             id="monitorMessage">
+
+            Waiting for a navigation action...
+
+        </div>
+
+
+        <div class="monitor-grid">
+
+
+            <div class="monitor-box">
+
+                <strong>
+                    BACK
+                </strong>
+
+                <span>
+                    history.back()
+                </span>
+
+            </div>
+
+
+            <div class="monitor-box">
+
+                <strong>
+                    FORWARD
+                </strong>
+
+                <span>
+                    history.forward()
+                </span>
+
+            </div>
+
+
+            <div class="monitor-box">
+
+                <strong>
+                    LENGTH
+                </strong>
+
+                <span>
+                    history.length
+                </span>
+
+            </div>
+
+
+            <div class="monitor-box">
+
+                <strong>
+                    RELOAD
+                </strong>
+
+                <span>
+                    location.reload()
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONCEPTS ================= -->
+
+    <section class="concept-card">
+
+        <div class="concept-heading">
+
+            <span>
+                💡 JAVASCRIPT CONCEPTS
+            </span>
+
+            <h2>
+                Browser History Object
+            </h2>
+
+        </div>
+
+
+        <div class="concept-grid">
+
+
+            <div>
+
+                <strong>
+                    history.back()
+                </strong>
+
+                <span>
+                    Navigates to previous page
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    history.forward()
+                </strong>
+
+                <span>
+                    Navigates to next page
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    history.length
+                </strong>
+
+                <span>
+                    Counts session history
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    location.reload()
+                </strong>
+
+                <span>
+                    Refreshes the page
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OUTPUT -->
+
+    <section class="output-card">
+
+        <div class="output-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <span>
+                SYSTEM STATUS
+            </span>
+
+            <p id="statusMessage">
+
+                Browser history manager loaded successfully.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 Keerthana L |
+        B.Tech Information Technology |
+        SIMATS Engineering
+
+    </p>
+
+
+    <span>
+
+        CO3 • Browser History Manager Using JavaScript
+
+    </span>
+
+</footer>
+
+
+
+<script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>
