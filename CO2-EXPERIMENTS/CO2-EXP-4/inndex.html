@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Result Analysis | Keerthana L</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                🎓 RESULT ANALYZER
+            </div>
+
+            <div class="student-info">
+                Keerthana L | B.Tech IT | 2nd Year
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <div class="container">
+
+
+            <!-- PAGE TITLE -->
+
+            <div class="page-title">
+
+                <span class="title-icon">
+                    📊
+                </span>
+
+                <div>
+
+                    <p class="mini-title">
+                        ACADEMIC PERFORMANCE
+                    </p>
+
+                    <h1>
+                        Student Result Analysis System
+                    </h1>
+
+                    <p>
+                        Enter student marks and analyze academic performance instantly.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= INPUT CARD ================= -->
+
+            <section class="input-card">
+
+                <h2>
+                    📝 Enter Student Details
+                </h2>
+
+                <p class="card-description">
+                    Enter marks between 0 and 100 for each subject.
+                </p>
+
+
+                <form id="resultForm">
+
+
+                    <!-- STUDENT NAME -->
+
+                    <div class="form-group">
+
+                        <label for="studentName">
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter student name"
+                        >
+
+                    </div>
+
+
+
+                    <!-- REGISTER NUMBER -->
+
+                    <div class="form-group">
+
+                        <label for="registerNo">
+                            Register Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerNo"
+                            placeholder="Enter register number"
+                        >
+
+                    </div>
+
+
+
+                    <!-- MARKS -->
+
+                    <div class="marks-section">
+
+                        <h3>
+                            📚 Subject Marks
+                        </h3>
+
+
+                        <div class="marks-grid">
+
+
+                            <div class="mark-input">
+
+                                <label>
+                                    Web Technology
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="web"
+                                    min="0"
+                                    max="100"
+                                    placeholder="0 - 100"
+                                >
+
+                            </div>
+
+
+                            <div class="mark-input">
+
+                                <label>
+                                    Cloud Computing
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="cloud"
+                                    min="0"
+                                    max="100"
+                                    placeholder="0 - 100"
+                                >
+
+                            </div>
+
+
+                            <div class="mark-input">
+
+                                <label>
+                                    Compiler Design
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="compiler"
+                                    min="0"
+                                    max="100"
+                                    placeholder="0 - 100"
+                                >
+
+                            </div>
+
+
+                            <div class="mark-input">
+
+                                <label>
+                                    Computer Vision
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="vision"
+                                    min="0"
+                                    max="100"
+                                    placeholder="0 - 100"
+                                >
+
+                            </div>
+
+
+                            <div class="mark-input">
+
+                                <label>
+                                    Big Data Analytics
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="bigdata"
+                                    min="0"
+                                    max="100"
+                                    placeholder="0 - 100"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="button-group">
+
+                        <button
+                            type="submit"
+                            class="analyze-btn">
+                            📊 Analyze Result
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="reset-btn"
+                            onclick="resetResult()">
+                            ↻ Reset
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- ================= RESULT ================= -->
+
+            <section
+                id="resultSection"
+                class="result-section">
+
+
+                <!-- STUDENT SUMMARY -->
+
+                <div class="result-header">
+
+                    <div>
+
+                        <p>
+                            RESULT SUMMARY
+                        </p>
+
+                        <h2 id="resultStudentName">
+                            Student Name
+                        </h2>
+
+                        <span id="resultRegisterNo">
+                            Register Number
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="resultStatus"
+                        class="status">
+                        -
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATISTICS -->
+
+                <div class="stats">
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            📈
+                        </span>
+
+                        <div>
+
+                            <small>
+                                TOTAL MARKS
+                            </small>
+
+                            <strong id="totalMarks">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            💯
+                        </span>
+
+                        <div>
+
+                            <small>
+                                AVERAGE
+                            </small>
+
+                            <strong id="average">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            🏆
+                        </span>
+
+                        <div>
+
+                            <small>
+                                HIGHEST
+                            </small>
+
+                            <strong id="highest">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            📉
+                        </span>
+
+                        <div>
+
+                            <small>
+                                LOWEST
+                            </small>
+
+                            <strong id="lowest">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= TABLE ================= -->
+
+                <div class="table-card">
+
+                    <h3>
+                        📋 Subject-wise Performance
+                    </h3>
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        No.
+                                    </th>
+
+                                    <th>
+                                        Subject
+                                    </th>
+
+                                    <th>
+                                        Marks
+                                    </th>
+
+                                    <th>
+                                        Grade
+                                    </th>
+
+                                    <th>
+                                        Result
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="resultTable">
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PERFORMANCE MESSAGE -->
+
+                <div
+                    id="performanceMessage"
+                    class="performance-message">
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Keerthana L | B.Tech Information Technology |
+        SIMATS Engineering
+
+    </footer>
+
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>
