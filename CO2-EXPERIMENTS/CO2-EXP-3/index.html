@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scientific Calculator | Keerthana L</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                🧮 SCI-CALC
+            </div>
+
+            <div class="student">
+                Keerthana L | B.Tech IT | 2nd Year
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <div class="calculator-container">
+
+
+            <!-- TOP INFORMATION -->
+
+            <div class="calculator-header">
+
+                <div>
+
+                    <p class="small-title">
+                        INTERACTIVE
+                    </p>
+
+                    <h1>
+                        Scientific Calculator
+                    </h1>
+
+                    <p class="subtitle">
+                        Perform arithmetic and scientific calculations easily
+                    </p>
+
+                </div>
+
+                <div class="mode">
+                    DEG
+                </div>
+
+            </div>
+
+
+
+            <!-- CALCULATOR -->
+
+            <div class="calculator">
+
+
+                <!-- DISPLAY -->
+
+                <div class="display-area">
+
+                    <div id="history">
+                        Ready to calculate...
+                    </div>
+
+                    <input
+                        type="text"
+                        id="display"
+                        value="0"
+                        readonly
+                    >
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="buttons">
+
+
+                    <!-- ROW 1 -->
+
+                    <button
+                        class="function"
+                        onclick="calculateSquare()">
+                        x²
+                    </button>
+
+                    <button
+                        class="function"
+                        onclick="calculateSquareRoot()">
+                        √
+                    </button>
+
+                    <button
+                        class="function"
+                        onclick="calculatePower()">
+                        xʸ
+                    </button>
+
+                    <button
+                        class="function"
+                        onclick="calculateLog()">
+                        log
+                    </button>
+
+                    <button
+                        class="clear"
+                        onclick="clearDisplay()">
+                        AC
+                    </button>
+
+
+
+                    <!-- ROW 2 -->
+
+                    <button
+                        class="function"
+                        onclick="calculateSin()">
+                        sin
+                    </button>
+
+                    <button
+                        class="function"
+                        onclick="calculateCos()">
+                        cos
+                    </button>
+
+                    <button
+                        class="function"
+                        onclick="calculateTan()">
+                        tan
+                    </button>
+
+                    <button
+                        class="function"
+                        onclick="calculatePi()">
+                        π
+                    </button>
+
+                    <button
+                        class="delete"
+                        onclick="deleteLast()">
+                        ⌫
+                    </button>
+
+
+
+                    <!-- ROW 3 -->
+
+                    <button onclick="appendValue('7')">
+                        7
+                    </button>
+
+                    <button onclick="appendValue('8')">
+                        8
+                    </button>
+
+                    <button onclick="appendValue('9')">
+                        9
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('/')">
+                        ÷
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('%')">
+                        %
+                    </button>
+
+
+
+                    <!-- ROW 4 -->
+
+                    <button onclick="appendValue('4')">
+                        4
+                    </button>
+
+                    <button onclick="appendValue('5')">
+                        5
+                    </button>
+
+                    <button onclick="appendValue('6')">
+                        6
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('*')">
+                        ×
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('-')">
+                        −
+                    </button>
+
+
+
+                    <!-- ROW 5 -->
+
+                    <button onclick="appendValue('1')">
+                        1
+                    </button>
+
+                    <button onclick="appendValue('2')">
+                        2
+                    </button>
+
+                    <button onclick="appendValue('3')">
+                        3
+                    </button>
+
+                    <button
+                        class="operator"
+                        onclick="appendValue('+')">
+                        +
+                    </button>
+
+                    <button
+                        class="equals tall"
+                        onclick="calculate()">
+                        =
+                    </button>
+
+
+
+                    <!-- ROW 6 -->
+
+                    <button
+                        class="zero"
+                        onclick="appendValue('0')">
+                        0
+                    </button>
+
+                    <button onclick="appendValue('.')">
+                        .
+                    </button>
+
+                    <button
+                        class="function"
+                        onclick="calculateFactorial()">
+                        n!
+                    </button>
+
+                    <button
+                        class="function"
+                        onclick="calculateExp()">
+                        eˣ
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOOTER INFORMATION -->
+
+            <div class="calculator-footer">
+
+                <div>
+                    <span>⚡</span>
+                    Fast Calculations
+                </div>
+
+                <div>
+                    <span>📐</span>
+                    Scientific Functions
+                </div>
+
+                <div>
+                    <span>🔢</span>
+                    Math Operations
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Keerthana L | B.Tech Information Technology |
+        SIMATS Engineering
+
+    </footer>
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>

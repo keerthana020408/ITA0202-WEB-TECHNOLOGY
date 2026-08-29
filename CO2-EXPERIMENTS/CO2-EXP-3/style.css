@@ -1,0 +1,663 @@
+/* =====================================================
+   EXPERIMENT 3
+   INTERACTIVE SCIENTIFIC CALCULATOR
+===================================================== */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #d9c2ff,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #b9edff,
+            transparent 30%
+        ),
+        #f5f6ff;
+
+    color: #292744;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    padding: 18px 7%;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.header-content {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.logo {
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.student {
+
+    color: white;
+
+    font-size: 13px;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+
+    min-height: calc(100vh - 130px);
+
+    padding: 45px 20px;
+
+}
+
+
+.calculator-container {
+
+    max-width: 620px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   CALCULATOR HEADER
+===================================================== */
+
+.calculator-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.small-title {
+
+    color: #6a11cb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.calculator-header h1 {
+
+    font-size: 30px;
+
+    margin-top: 3px;
+
+    color: #292744;
+
+}
+
+
+.subtitle {
+
+    color: #777;
+
+    font-size: 12px;
+
+    margin-top: 3px;
+
+}
+
+
+.mode {
+
+    background:
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    color: white;
+
+    padding: 9px 17px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   CALCULATOR
+===================================================== */
+
+.calculator {
+
+    background: #202035;
+
+    padding: 22px;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 50px rgba(45, 35, 100, 0.3);
+
+}
+
+
+/* =====================================================
+   DISPLAY
+===================================================== */
+
+.display-area {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151523,
+            #292941
+        );
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+}
+
+
+#history {
+
+    color: #999;
+
+    font-size: 11px;
+
+    text-align: right;
+
+    height: 20px;
+
+    overflow: hidden;
+
+}
+
+
+#display {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 34px;
+
+    font-weight: 600;
+
+    text-align: right;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* =====================================================
+   BUTTON GRID
+===================================================== */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button {
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #34344d;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s,
+        background 0.15s;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    background: #454564;
+
+    box-shadow:
+        0 8px 15px rgba(0,0,0,0.2);
+
+}
+
+
+button:active {
+
+    transform: scale(0.94);
+
+}
+
+
+/* =====================================================
+   FUNCTION BUTTONS
+===================================================== */
+
+.function {
+
+    background:
+        linear-gradient(
+            135deg,
+            #423b70,
+            #514b82
+        );
+
+    color: #ddd3ff;
+
+}
+
+
+.function:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #554b8d,
+            #655da0
+        );
+
+}
+
+
+/* =====================================================
+   OPERATORS
+===================================================== */
+
+.operator {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8a3d,
+            #ff5e62
+        );
+
+}
+
+
+.operator:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9d5b,
+            #ff7275
+        );
+
+}
+
+
+/* =====================================================
+   CLEAR
+===================================================== */
+
+.clear {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff416c,
+            #ff4b2b
+        );
+
+}
+
+
+.clear:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff587d,
+            #ff6248
+        );
+
+}
+
+
+/* DELETE */
+
+.delete {
+
+    background: #51394e;
+
+    color: #ffb6c7;
+
+}
+
+
+/* =====================================================
+   EQUALS
+===================================================== */
+
+.equals {
+
+    background:
+        linear-gradient(
+            135deg,
+            #00b09b,
+            #96c93d
+        );
+
+    color: white;
+
+}
+
+
+.equals:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #08c9ae,
+            #a7da4b
+        );
+
+}
+
+
+.tall {
+
+    height: 126px;
+
+    grid-row: span 2;
+
+}
+
+
+/* =====================================================
+   ZERO
+===================================================== */
+
+.zero {
+
+    grid-column: span 2;
+
+}
+
+
+/* =====================================================
+   BOTTOM INFORMATION
+===================================================== */
+
+.calculator-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    padding: 14px 18px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(50,40,100,0.08);
+
+}
+
+
+.calculator-footer div {
+
+    color: #666;
+
+    font-size: 11px;
+
+}
+
+
+.calculator-footer span {
+
+    color: #6a11cb;
+
+    margin-right: 4px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 18px;
+
+    color: #777;
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    header {
+
+        padding: 15px 5%;
+
+    }
+
+
+    .header-content {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+
+    .student {
+
+        font-size: 10px;
+
+    }
+
+
+    main {
+
+        padding: 30px 12px;
+
+    }
+
+
+    .calculator-header h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 10px;
+
+    }
+
+
+    .calculator {
+
+        padding: 15px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .buttons {
+
+        gap: 7px;
+
+    }
+
+
+    button {
+
+        height: 52px;
+
+        font-size: 14px;
+
+        border-radius: 11px;
+
+    }
+
+
+    .tall {
+
+        height: 111px;
+
+    }
+
+
+    #display {
+
+        font-size: 27px;
+
+    }
+
+
+    .calculator-footer {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+}
