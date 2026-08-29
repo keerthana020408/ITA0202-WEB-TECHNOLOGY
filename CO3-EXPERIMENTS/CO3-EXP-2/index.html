@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Student Registration List</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <h2>StudentHub</h2>
+
+                    <p>STUDENT REGISTRATION SYSTEM</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-tag">
+
+                Keerthana L | B.Tech IT | 2nd Year
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div>
+
+                <span class="badge">
+                    ✨ CO3 • EXPERIMENT 2
+                </span>
+
+                <h1>
+                    Dynamic Student
+                    <span>Registration List</span>
+                </h1>
+
+                <p>
+
+                    Add and manage student records dynamically
+                    using JavaScript DOM manipulation.
+
+                </p>
+
+            </div>
+
+
+            <div class="hero-icon">
+                👩‍🎓
+            </div>
+
+        </section>
+
+
+
+        <!-- REGISTRATION CARD -->
+
+        <section class="registration-card">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        📝 REGISTRATION
+                    </span>
+
+                    <h2>
+                        Add Student
+                    </h2>
+
+                </div>
+
+
+                <div class="heading-icon">
+                    +
+                </div>
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label>
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name">
+
+                </div>
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="input-group">
+
+                    <label>
+                        Department
+                    </label>
+
+                    <select id="department">
+
+                        <option value="">
+                            Select department
+                        </option>
+
+                        <option>
+                            Information Technology
+                        </option>
+
+                        <option>
+                            Computer Science Engineering
+                        </option>
+
+                        <option>
+                            Electronics and Communication
+                        </option>
+
+                        <option>
+                            Mechanical Engineering
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- REGISTER NUMBER -->
+
+                <div class="input-group">
+
+                    <label>
+                        Register Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerNumber"
+                        placeholder="Enter register number">
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="button-area">
+
+                <button
+                    id="addButton"
+                    class="add-btn">
+
+                    + Add Student
+
+                </button>
+
+
+                <button
+                    id="clearButton"
+                    class="clear-btn">
+
+                    🗑 Clear All
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- STUDENT LIST -->
+
+        <section class="list-card">
+
+
+            <div class="list-header">
+
+                <div>
+
+                    <span>
+                        📋 REGISTERED STUDENTS
+                    </span>
+
+                    <h2>
+                        Student Records
+                    </h2>
+
+                </div>
+
+
+                <div class="count">
+
+                    <strong id="studentCount">
+                        0
+                    </strong>
+
+                    Students
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TABLE -->
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Student Name
+                            </th>
+
+                            <th>
+                                Department
+                            </th>
+
+                            <th>
+                                Register Number
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentList">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- EMPTY MESSAGE -->
+
+            <div
+                id="emptyMessage"
+                class="empty">
+
+                <div>
+                    📚
+                </div>
+
+                <h3>
+                    No students registered yet
+                </h3>
+
+                <p>
+                    Add a student using the registration form above.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- OUTPUT -->
+
+        <section class="output-card">
+
+            <div class="output-icon">
+                ⚡
+            </div>
+
+            <div>
+
+                <span>
+                    LIVE DOM OUTPUT
+                </span>
+
+                <p id="outputMessage">
+
+                    Ready to add student records.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Keerthana L |
+            B.Tech Information Technology |
+            SIMATS Engineering
+
+        </p>
+
+        <span>
+            CO3 • Dynamic Student Registration List Using DOM
+        </span>
+
+    </footer>
+
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>

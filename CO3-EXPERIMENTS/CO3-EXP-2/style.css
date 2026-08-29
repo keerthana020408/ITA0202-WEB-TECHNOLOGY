@@ -1,0 +1,799 @@
+/* =====================================================
+   CO3 - EXPERIMENT 2
+   DYNAMIC STUDENT REGISTRATION LIST USING DOM
+===================================================== */
+
+
+/* RESET */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* BODY */
+
+body {
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #292744;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            #ddd2ff,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 90%,
+            #c8f3ff,
+            transparent 30%
+        ),
+
+        #f7f8ff;
+
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+
+    padding: 16px 6%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.15);
+
+}
+
+
+.header-content {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.brand-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,0.18);
+
+    font-size: 22px;
+
+}
+
+
+.brand h2 {
+
+    color: white;
+
+    font-size: 19px;
+
+}
+
+
+.brand p {
+
+    color: #ddd6ff;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.student-tag {
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    font-size: 9px;
+
+}
+
+
+/* ================= MAIN ================= */
+
+main {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 45px 20px;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    color: #6a11cb;
+
+    background: #eee8ff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.hero h1 {
+
+    margin-top: 13px;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.hero p {
+
+    margin-top: 8px;
+
+    color: #858397;
+
+    font-size: 11px;
+
+}
+
+
+.hero-icon {
+
+    width: 105px;
+
+    height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 28px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px rgba(60,40,120,0.12);
+
+    font-size: 45px;
+
+}
+
+
+/* ================= COMMON CARD ================= */
+
+.registration-card,
+.list-card {
+
+    padding: 30px;
+
+    margin-bottom: 20px;
+
+    border-radius: 24px;
+
+    background: white;
+
+    box-shadow:
+        0 20px 50px rgba(50,40,120,0.10);
+
+}
+
+
+/* ================= HEADING ================= */
+
+.section-heading,
+.list-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.section-heading span,
+.list-header span {
+
+    color: #6a11cb;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-heading h2,
+.list-header h2 {
+
+    margin-top: 3px;
+
+    font-size: 22px;
+
+}
+
+
+.heading-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color: #6a11cb;
+
+    background: #eee8ff;
+
+    font-size: 27px;
+
+}
+
+
+/* ================= FORM ================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 23px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.input-group input,
+.input-group select {
+
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 2px solid #e9e7f2;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+
+    border-color: #6a11cb;
+
+    box-shadow:
+        0 0 0 4px rgba(106,17,203,0.08);
+
+}
+
+
+/* ================= BUTTON AREA ================= */
+
+.button-area {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+.button-area button {
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.add-btn {
+
+    border: none;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+}
+
+
+.clear-btn {
+
+    border: 2px solid #eadfeb;
+
+    color: #777;
+
+    background: white;
+
+}
+
+
+.button-area button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(50,40,120,0.15);
+
+}
+
+
+/* ================= COUNT ================= */
+
+.count {
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    color: #6a11cb;
+
+    background: #f0ebff;
+
+    font-size: 9px;
+
+}
+
+
+.count strong {
+
+    font-size: 16px;
+
+}
+
+
+/* ================= TABLE ================= */
+
+.table-wrapper {
+
+    margin-top: 22px;
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th {
+
+    padding: 13px;
+
+    text-align: left;
+
+    color: #6a11cb;
+
+    background: #f5f2ff;
+
+    font-size: 9px;
+
+}
+
+
+td {
+
+    padding: 13px;
+
+    border-bottom: 1px solid #eeeeF5;
+
+    color: #555;
+
+    font-size: 9px;
+
+}
+
+
+.name-cell {
+
+    color: #292744;
+
+    font-weight: 700;
+
+}
+
+
+.dept-cell {
+
+    color: #6a11cb;
+
+    font-weight: 600;
+
+}
+
+
+/* ================= REMOVE BUTTON ================= */
+
+.remove-btn {
+
+    padding: 6px 11px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    color: #b52e48;
+
+    background: #ffe7ec;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.remove-btn:hover {
+
+    transform: scale(1.06);
+
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty {
+
+    padding: 35px;
+
+    text-align: center;
+
+    color: #999;
+
+}
+
+
+.empty div {
+
+    font-size: 30px;
+
+}
+
+
+.empty h3 {
+
+    margin-top: 8px;
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+
+.empty p {
+
+    margin-top: 4px;
+
+    font-size: 9px;
+
+}
+
+
+/* ================= OUTPUT ================= */
+
+.output-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    margin-top: 20px;
+
+    border-radius: 17px;
+
+    color: white;
+
+    background: #202033;
+
+}
+
+
+.output-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #ffffff18;
+
+    font-size: 18px;
+
+}
+
+
+.output-card span {
+
+    color: #aaa7c0;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.output-card p {
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #888598;
+
+    font-size: 9px;
+
+}
+
+
+footer span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #aaa7b5;
+
+    font-size: 7px;
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 750px) {
+
+    .header-content {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+
+    .hero-icon {
+
+        align-self: center;
+
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .registration-card,
+    .list-card {
+
+        padding: 20px;
+
+    }
+
+
+    .button-area {
+
+        flex-direction: column;
+
+    }
+
+
+    .button-area button {
+
+        width: 100%;
+
+    }
+
+}
