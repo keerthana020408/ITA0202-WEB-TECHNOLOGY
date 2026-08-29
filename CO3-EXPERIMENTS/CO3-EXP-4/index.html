@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Browser Information Dashboard</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="header-content">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🌐
+            </div>
+
+            <div>
+
+                <h2>BrowserScope</h2>
+
+                <p>WINDOW OBJECT INFORMATION DASHBOARD</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="student-tag">
+
+            Keerthana L | B.Tech IT | 2nd Year
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+
+            <span class="badge">
+                ✨ CO3 • EXPERIMENT 4
+            </span>
+
+            <h1>
+
+                Browser Information
+                <span>Dashboard</span>
+
+            </h1>
+
+            <p>
+
+                Explore browser, screen, window and
+                navigation information using JavaScript.
+
+            </p>
+
+        </div>
+
+
+        <div class="hero-icon">
+            💻
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= STATUS ================= -->
+
+    <section class="status-card">
+
+        <div class="status-item">
+
+            <div class="status-icon">
+                🌐
+            </div>
+
+            <div>
+
+                <span>CONNECTION</span>
+
+                <h3 id="onlineStatus">
+                    Checking...
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="status-item">
+
+            <div class="status-icon">
+                🖥️
+            </div>
+
+            <div>
+
+                <span>SCREEN</span>
+
+                <h3 id="screenSize">
+                    -- × --
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="status-item">
+
+            <div class="status-icon">
+                📐
+            </div>
+
+            <div>
+
+                <span>VIEWPORT</span>
+
+                <h3 id="viewportSize">
+                    -- × --
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= INFORMATION GRID ================= -->
+
+    <section class="info-grid">
+
+
+        <!-- BROWSER -->
+
+        <div class="info-card">
+
+            <div class="card-title">
+
+                <div class="card-icon">
+                    🌎
+                </div>
+
+                <div>
+
+                    <span>BROWSER</span>
+
+                    <h2>Browser Information</h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Language</span>
+
+                <strong id="language">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Platform</span>
+
+                <strong id="platform">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Cookies Enabled</span>
+
+                <strong id="cookies">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Online Status</span>
+
+                <strong id="browserOnline">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WINDOW -->
+
+        <div class="info-card">
+
+            <div class="card-title">
+
+                <div class="card-icon">
+                    🪟
+                </div>
+
+                <div>
+
+                    <span>WINDOW</span>
+
+                    <h2>Window Information</h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Inner Width</span>
+
+                <strong id="innerWidth">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Inner Height</span>
+
+                <strong id="innerHeight">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Scroll X</span>
+
+                <strong id="scrollX">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Scroll Y</span>
+
+                <strong id="scrollY">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SCREEN -->
+
+        <div class="info-card">
+
+            <div class="card-title">
+
+                <div class="card-icon">
+                    🖥️
+                </div>
+
+                <div>
+
+                    <span>SCREEN</span>
+
+                    <h2>Screen Information</h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Screen Width</span>
+
+                <strong id="screenWidth">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Screen Height</span>
+
+                <strong id="screenHeight">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Available Width</span>
+
+                <strong id="availableWidth">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Available Height</span>
+
+                <strong id="availableHeight">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOCATION -->
+
+        <div class="info-card">
+
+            <div class="card-title">
+
+                <div class="card-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <span>LOCATION</span>
+
+                    <h2>Current Page</h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="url-box">
+
+                <span>Current URL</span>
+
+                <p id="currentURL">
+                    --
+                </p>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Protocol</span>
+
+                <strong id="protocol">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Hostname</span>
+
+                <strong id="hostname">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= LIVE MONITOR ================= -->
+
+    <section class="monitor-card">
+
+        <div class="monitor-header">
+
+            <div>
+
+                <span>⚡ LIVE WINDOW MONITOR</span>
+
+                <h2>
+                    Resize or Scroll the Page
+                </h2>
+
+            </div>
+
+            <div class="live">
+                ● LIVE
+            </div>
+
+        </div>
+
+
+        <div class="monitor-message"
+             id="monitorMessage">
+
+            Window information is being monitored...
+
+        </div>
+
+
+        <div class="monitor-grid">
+
+
+            <div class="monitor-box">
+
+                <strong>
+                    window.innerWidth
+                </strong>
+
+                <span id="monitorWidth">
+                    --
+                </span>
+
+            </div>
+
+
+            <div class="monitor-box">
+
+                <strong>
+                    window.innerHeight
+                </strong>
+
+                <span id="monitorHeight">
+                    --
+                </span>
+
+            </div>
+
+
+            <div class="monitor-box">
+
+                <strong>
+                    window.scrollX
+                </strong>
+
+                <span id="monitorScrollX">
+                    --
+                </span>
+
+            </div>
+
+
+            <div class="monitor-box">
+
+                <strong>
+                    window.scrollY
+                </strong>
+
+                <span id="monitorScrollY">
+                    --
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= JAVASCRIPT CONCEPTS ================= -->
+
+    <section class="concept-card">
+
+        <div class="concept-heading">
+
+            <span>
+                💡 JAVASCRIPT CONCEPTS USED
+            </span>
+
+            <h2>
+                Window Object
+            </h2>
+
+        </div>
+
+
+        <div class="concept-grid">
+
+
+            <div>
+                <strong>window.location</strong>
+                <span>Page URL information</span>
+            </div>
+
+
+            <div>
+                <strong>navigator</strong>
+                <span>Browser information</span>
+            </div>
+
+
+            <div>
+                <strong>screen</strong>
+                <span>Screen information</span>
+            </div>
+
+
+            <div>
+                <strong>window.innerWidth</strong>
+                <span>Viewport width</span>
+            </div>
+
+
+            <div>
+                <strong>window.innerHeight</strong>
+                <span>Viewport height</span>
+            </div>
+
+
+            <div>
+                <strong>resize</strong>
+                <span>Detects window resize</span>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OUTPUT -->
+
+    <section class="output-card">
+
+        <div class="output-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <span>
+                DASHBOARD STATUS
+            </span>
+
+            <p id="statusMessage">
+
+                Browser information loaded successfully.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 Keerthana L |
+        B.Tech Information Technology |
+        SIMATS Engineering
+
+    </p>
+
+    <span>
+
+        CO3 • Browser Information Dashboard Using Window Object
+
+    </span>
+
+</footer>
+
+
+
+<script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>
