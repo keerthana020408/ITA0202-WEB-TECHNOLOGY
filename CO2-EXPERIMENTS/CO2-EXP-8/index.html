@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Clock & Exam Countdown | Keerthana L</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    ⏰
+                </div>
+
+                <div>
+
+                    <h2>TimeMaster</h2>
+
+                    <span>SMART TIME MANAGEMENT</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-info">
+
+                Keerthana L | B.Tech IT | 2nd Year
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <div class="container">
+
+
+            <!-- ================= HERO ================= -->
+
+            <section class="hero">
+
+                <div>
+
+                    <p class="tag">
+                        ⏱️ LIVE TIME DASHBOARD
+                    </p>
+
+                    <h1>
+
+                        Stay On Time.
+                        <span>Stay Prepared.</span>
+
+                    </h1>
+
+                    <p class="description">
+
+                        A digital clock and examination countdown
+                        timer designed to help students manage time
+                        effectively.
+
+                    </p>
+
+                </div>
+
+
+                <div class="hero-icon">
+                    ⏰
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= CLOCK CARD ================= -->
+
+            <section class="clock-card">
+
+
+                <div class="section-label">
+                    CURRENT TIME
+                </div>
+
+
+                <div id="digitalClock"
+                    class="digital-clock">
+
+                    00:00:00
+
+                </div>
+
+
+                <div id="dateDisplay"
+                    class="date-display">
+
+                    Loading date...
+
+                </div>
+
+
+                <div class="clock-status">
+
+                    <span class="live-dot"></span>
+
+                    LIVE
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= COUNTDOWN ================= -->
+
+            <section class="countdown-card">
+
+
+                <div class="countdown-header">
+
+                    <div>
+
+                        <p>
+                            EXAMINATION TIMER
+                        </p>
+
+                        <h2>
+                            Next Examination
+                        </h2>
+
+                    </div>
+
+
+                    <div class="calendar-icon">
+                        📅
+                    </div>
+
+                </div>
+
+
+
+                <div class="exam-info">
+
+                    <h3>
+                        Web Technology Practical Examination
+                    </h3>
+
+                    <p>
+                        B.Tech Information Technology
+                    </p>
+
+                </div>
+
+
+
+                <!-- COUNTDOWN -->
+
+                <div class="countdown">
+
+
+                    <div class="time-box">
+
+                        <span id="days">
+                            00
+                        </span>
+
+                        <small>
+                            DAYS
+                        </small>
+
+                    </div>
+
+
+                    <div class="colon">
+                        :
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="hours">
+                            00
+                        </span>
+
+                        <small>
+                            HOURS
+                        </small>
+
+                    </div>
+
+
+                    <div class="colon">
+                        :
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="minutes">
+                            00
+                        </span>
+
+                        <small>
+                            MINUTES
+                        </small>
+
+                    </div>
+
+
+                    <div class="colon">
+                        :
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="seconds">
+                            00
+                        </span>
+
+                        <small>
+                            SECONDS
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div id="countdownMessage"
+                    class="countdown-message">
+
+                    ⏳ Time remaining until examination
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= INFO CARDS ================= -->
+
+            <section class="features">
+
+
+                <div class="feature">
+
+                    <span>
+                        🕐
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Live Clock
+                        </h3>
+
+                        <p>
+                            Updates every second
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span>
+                        📅
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Exam Countdown
+                        </h3>
+
+                        <p>
+                            Track remaining time
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span>
+                        ⚡
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Real-Time Update
+                        </h3>
+
+                        <p>
+                            Dynamic DOM updates
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Keerthana L |
+        B.Tech Information Technology |
+        SIMATS Engineering
+
+    </footer>
+
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>
