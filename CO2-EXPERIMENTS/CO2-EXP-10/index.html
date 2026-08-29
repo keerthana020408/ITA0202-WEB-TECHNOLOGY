@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | Keerthana L</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <h2>StudentHub</h2>
+
+                    <span>ONLINE STUDENT REGISTRATION</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-info">
+
+                Keerthana L | B.Tech IT | 2nd Year
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <div class="container">
+
+
+            <!-- ================= HERO ================= -->
+
+            <section class="hero">
+
+                <div>
+
+                    <p class="tag">
+                        🎓 STUDENT PORTAL
+                    </p>
+
+                    <h1>
+
+                        Register Today.
+                        <span>Build Your Future.</span>
+
+                    </h1>
+
+                    <p class="description">
+
+                        A responsive student registration form
+                        with real-time JavaScript validation
+                        and instant registration confirmation.
+
+                    </p>
+
+                </div>
+
+
+                <div class="hero-icon">
+                    🎓
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= FORM CARD ================= -->
+
+            <section class="form-card">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p>
+                            REGISTRATION FORM
+                        </p>
+
+                        <h2>
+                            Student Details
+                        </h2>
+
+                    </div>
+
+
+                    <div class="form-icon">
+                        📝
+                    </div>
+
+                </div>
+
+
+
+                <form id="registrationForm">
+
+
+                    <!-- NAME -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name">
+
+                        <small id="nameError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email address">
+
+                        <small id="emailError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="phone"
+                            maxlength="10"
+                            placeholder="Enter 10-digit mobile number">
+
+                        <small id="phoneError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- REGISTER NUMBER -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Register Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerNumber"
+                            placeholder="Enter register number">
+
+                        <small id="registerError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- COURSE -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Course
+                        </label>
+
+                        <select id="course">
+
+                            <option value="">
+                                Select your course
+                            </option>
+
+                            <option>
+                                B.Tech Information Technology
+                            </option>
+
+                            <option>
+                                B.Tech Computer Science
+                            </option>
+
+                            <option>
+                                B.E. Electronics and Communication
+                            </option>
+
+                            <option>
+                                B.E. Mechanical Engineering
+                            </option>
+
+                        </select>
+
+                        <small id="courseError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- YEAR -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Year of Study
+                        </label>
+
+                        <select id="year">
+
+                            <option value="">
+                                Select year
+                            </option>
+
+                            <option>
+                                1st Year
+                            </option>
+
+                            <option>
+                                2nd Year
+                            </option>
+
+                            <option>
+                                3rd Year
+                            </option>
+
+                            <option>
+                                4th Year
+                            </option>
+
+                        </select>
+
+                        <small id="yearError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- GENDER -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Gender
+                        </label>
+
+                        <div class="radio-group">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Female">
+
+                                Female
+                            </label>
+
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Male">
+
+                                Male
+                            </label>
+
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Other">
+
+                                Other
+                            </label>
+
+                        </div>
+
+                        <small id="genderError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create a password">
+
+                        <small id="passwordError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms">
+
+                            I agree to the registration terms
+                            and conditions.
+
+                        </label>
+
+                        <small id="termsError">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="buttons">
+
+                        <button
+                            type="submit"
+                            class="register-btn">
+
+                            ✓ Register Student
+
+                        </button>
+
+
+                        <button
+                            type="reset"
+                            class="clear-btn"
+                            id="clearButton">
+
+                            Clear Form
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+            </section>
+
+
+
+            <!-- ================= SUCCESS CARD ================= -->
+
+            <section
+                id="successCard"
+                class="success-card">
+
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+
+                <h2>
+                    Registration Successful!
+                </h2>
+
+
+                <p id="successMessage">
+
+                    Student registered successfully.
+
+                </p>
+
+
+                <div class="success-details">
+
+                    <span id="studentName">
+                    </span>
+
+                    <span id="studentCourse">
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= FEATURES ================= -->
+
+            <section class="features">
+
+
+                <div class="feature">
+
+                    <span>
+                        🔐
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Secure Form
+                        </h3>
+
+                        <p>
+                            Password validation
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span>
+                        ✅
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Validation
+                        </h3>
+
+                        <p>
+                            Instant error checking
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span>
+                        📱
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Responsive
+                        </h3>
+
+                        <p>
+                            Works on all screens
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Keerthana L |
+        B.Tech Information Technology |
+        SIMATS Engineering
+
+    </footer>
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>
