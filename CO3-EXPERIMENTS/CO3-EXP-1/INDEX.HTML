@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Student Profile</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <h2>StudentHub</h2>
+
+                    <p>DOM PROFILE MANAGEMENT</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-tag">
+
+                Keerthana L | B.Tech IT
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <section class="hero">
+
+            <div>
+
+                <span class="badge">
+                    ✨ CO3 • EXPERIMENT 1
+                </span>
+
+                <h1 id="mainHeading">
+
+                    My Student Profile
+
+                </h1>
+
+                <p class="hero-text">
+
+                    Interactive profile manipulation using
+                    JavaScript DOM methods.
+
+                </p>
+
+            </div>
+
+
+            <div class="hero-symbol">
+                💻
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PROFILE CARD ================= -->
+
+        <section id="profileCard"
+                 class="profile-card">
+
+
+            <div class="profile-top">
+
+
+                <!-- PROFILE ICON -->
+
+                <div class="profile-image"
+                     id="profileImage">
+
+                    KL
+
+                </div>
+
+
+                <div class="profile-title">
+
+                    <p class="small-title">
+                        STUDENT PROFILE
+                    </p>
+
+                    <h2 id="studentName">
+
+                        Keerthana L
+
+                    </h2>
+
+                    <p id="studentRole">
+
+                        B.Tech Information Technology
+
+                    </p>
+
+                </div>
+
+
+                <span id="status"
+                      class="status">
+
+                    ● ACTIVE
+
+                </span>
+
+            </div>
+
+
+
+            <!-- ================= DETAILS ================= -->
+
+            <div class="details">
+
+
+                <div class="detail-box">
+
+                    <span class="detail-icon">
+                        🎓
+                    </span>
+
+                    <div>
+
+                        <label>
+                            Course
+                        </label>
+
+                        <p id="course">
+                            B.Tech Information Technology
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span class="detail-icon">
+                        📚
+                    </span>
+
+                    <div>
+
+                        <label>
+                            Year
+                        </label>
+
+                        <p id="year">
+                            2nd Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span class="detail-icon">
+                        🏫
+                    </span>
+
+                    <div>
+
+                        <label>
+                            Institution
+                        </label>
+
+                        <p id="college">
+                            SIMATS Engineering
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span class="detail-icon">
+                        💻
+                    </span>
+
+                    <div>
+
+                        <label>
+                            Department
+                        </label>
+
+                        <p id="department">
+                            Information Technology
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= DESCRIPTION ================= -->
+
+            <div class="about">
+
+                <label>
+                    ABOUT ME
+                </label>
+
+                <p id="aboutText">
+
+                    I am Keerthana, a second-year B.Tech
+                    Information Technology student interested
+                    in web development and programming.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= CONTROLS ================= -->
+
+        <section class="control-card">
+
+
+            <div class="control-heading">
+
+                <div>
+
+                    <span>
+                        ⚙️ DOM CONTROLS
+                    </span>
+
+                    <h2>
+                        Manipulate My Profile
+                    </h2>
+
+                </div>
+
+                <div class="dom-icon">
+                    &lt;/&gt;
+                </div>
+
+            </div>
+
+
+
+            <div class="buttons">
+
+
+                <button
+                    class="purple"
+                    id="headingButton">
+
+                    ✏️ Change Heading
+
+                </button>
+
+
+                <button
+                    class="blue"
+                    id="textColorButton">
+
+                    🎨 Change Text Colour
+
+                </button>
+
+
+                <button
+                    class="pink"
+                    id="backgroundButton">
+
+                    🌈 Change Background
+
+                </button>
+
+
+                <button
+                    class="green"
+                    id="hideButton">
+
+                    👁️ Hide Profile
+
+                </button>
+
+
+                <button
+                    class="orange"
+                    id="showButton">
+
+                    👀 Show Profile
+
+                </button>
+
+
+                <button
+                    class="dark"
+                    id="highlightButton">
+
+                    ⭐ Highlight Profile
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= OUTPUT ================= -->
+
+        <section class="output-card">
+
+
+            <div class="output-icon">
+                ⚡
+            </div>
+
+
+            <div>
+
+                <p>
+                    LIVE DOM OUTPUT
+                </p>
+
+                <h3 id="outputMessage">
+
+                    Select a control to manipulate
+                    the student profile.
+
+                </h3>
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Keerthana L |
+
+            B.Tech Information Technology |
+
+            SIMATS Engineering
+
+        </p>
+
+        <span>
+            CO3 • DOM-Based Student Profile Manipulation
+        </span>
+
+    </footer>
+
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>
