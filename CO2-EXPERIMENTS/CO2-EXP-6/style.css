@@ -1,0 +1,939 @@
+/* =====================================================
+   EXPERIMENT 6
+   DYNAMIC TO-DO LIST APPLICATION
+===================================================== */
+
+
+/* ================= RESET ================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ================= BODY ================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #292744;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #dfd2ff,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #c8f2ff,
+            transparent 30%
+        ),
+
+        #f7f8ff;
+
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    padding: 17px 6%;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.15);
+
+}
+
+
+.header-content {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.logo-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background: rgba(255,255,255,0.18);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 12px;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+}
+
+
+.logo h2 {
+
+    color: white;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+}
+
+
+.logo span {
+
+    color: #ddd5ff;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+}
+
+
+.student-info {
+
+    color: white;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.13);
+
+    font-size: 10px;
+
+}
+
+
+/* ================= MAIN ================= */
+
+main {
+
+    padding: 45px 20px;
+
+}
+
+
+.container {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    color: #6a11cb;
+
+    background: #eee8ff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero h1 {
+
+    margin: 14px 0 8px;
+
+    font-size: 40px;
+
+    line-height: 1.2;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.description {
+
+    max-width: 570px;
+
+    color: #77768a;
+
+    font-size: 12px;
+
+}
+
+
+.hero-icon {
+
+    width: 120px;
+
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 30px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px rgba(50,40,120,0.12);
+
+    font-size: 55px;
+
+    transform: rotate(4deg);
+
+}
+
+
+/* ================= TODO CARD ================= */
+
+.todo-card {
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: white;
+
+    box-shadow:
+        0 20px 50px rgba(50,40,120,0.10);
+
+}
+
+
+/* ================= CARD HEADING ================= */
+
+.card-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+
+}
+
+
+.card-heading p {
+
+    color: #6a11cb;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.card-heading h2 {
+
+    font-size: 23px;
+
+}
+
+
+.task-count {
+
+    padding: 10px 17px;
+
+    border-radius: 30px;
+
+    color: #6a11cb;
+
+    background: #f0ebff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.task-count span {
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+}
+
+
+/* ================= INPUT ================= */
+
+.input-area {
+
+    display: grid;
+
+    grid-template-columns: 1fr 160px 120px;
+
+    gap: 10px;
+
+}
+
+
+.input-area input,
+.input-area select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 2px solid #e9e7f2;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    background: white;
+
+}
+
+
+.input-area input:focus,
+.input-area select:focus {
+
+    border-color: #6a11cb;
+
+    box-shadow:
+        0 0 0 4px rgba(106,17,203,0.08);
+
+}
+
+
+#addButton {
+
+    border: none;
+
+    border-radius: 11px;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+#addButton:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(37,117,252,0.25);
+
+}
+
+
+/* ================= FILTER ================= */
+
+.filter-area {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin: 25px 0 15px;
+
+}
+
+
+.filter {
+
+    border: none;
+
+    padding: 8px 16px;
+
+    border-radius: 20px;
+
+    background: #f2f1f7;
+
+    color: #777;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.filter.active {
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc
+        );
+
+}
+
+
+/* ================= TASK LIST ================= */
+
+#taskList {
+
+    list-style: none;
+
+}
+
+
+.task-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #eceaf4;
+
+    border-radius: 14px;
+
+    background: #fcfcff;
+
+    transition: 0.3s;
+
+}
+
+
+.task-item:hover {
+
+    transform: translateX(3px);
+
+    box-shadow:
+        0 7px 20px rgba(50,40,120,0.07);
+
+}
+
+
+/* ================= CHECK BUTTON ================= */
+
+.check-button {
+
+    width: 25px;
+
+    height: 25px;
+
+    flex-shrink: 0;
+
+    border: 2px solid #d7d3e6;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+}
+
+
+.task-item.completed .check-button {
+
+    color: white;
+
+    border-color: #28a56a;
+
+    background: #28a56a;
+
+}
+
+
+.task-content {
+
+    flex: 1;
+
+}
+
+
+.task-title {
+
+    display: block;
+
+    color: #333;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.task-item.completed .task-title {
+
+    color: #999;
+
+    text-decoration: line-through;
+
+}
+
+
+.priority {
+
+    display: inline-block;
+
+    margin-top: 5px;
+
+    padding: 3px 9px;
+
+    border-radius: 10px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+}
+
+
+.priority.Low {
+
+    color: #26764d;
+
+    background: #dcf8e9;
+
+}
+
+
+.priority.Medium {
+
+    color: #916b00;
+
+    background: #fff1c7;
+
+}
+
+
+.priority.High {
+
+    color: #a52d3d;
+
+    background: #ffe0e5;
+
+}
+
+
+/* ================= ACTION BUTTONS ================= */
+
+.actions {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.edit-btn,
+.delete-btn {
+
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.edit-btn {
+
+    color: #5a43a6;
+
+    background: #eee9ff;
+
+}
+
+
+.delete-btn {
+
+    color: #a52d3d;
+
+    background: #ffe8ec;
+
+}
+
+
+.edit-btn:hover,
+.delete-btn:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ================= EMPTY MESSAGE ================= */
+
+.empty-message {
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    color: #888;
+
+}
+
+
+.empty-message div {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.empty-message h3 {
+
+    color: #555;
+
+    font-size: 15px;
+
+}
+
+
+.empty-message p {
+
+    font-size: 10px;
+
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 20px;
+
+}
+
+
+.feature {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 17px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(50,40,120,0.06);
+
+}
+
+
+.feature > span {
+
+    font-size: 23px;
+
+}
+
+
+.feature h3 {
+
+    font-size: 12px;
+
+}
+
+
+.feature p {
+
+    color: #999;
+
+    font-size: 9px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .input-area {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    #addButton {
+
+        grid-column: 1 / -1;
+
+        padding: 12px;
+
+    }
+
+
+    .features {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .feature {
+
+        min-width: 45%;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header-content {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .hero-icon {
+
+        align-self: center;
+
+    }
+
+
+    .todo-card {
+
+        padding: 20px;
+
+    }
+
+
+    .card-heading {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .input-area {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    #addButton {
+
+        grid-column: auto;
+
+    }
+
+
+    .task-item {
+
+        align-items: flex-start;
+
+    }
+
+
+    .actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .features {
+
+        flex-direction: column;
+
+    }
+
+
+    .feature {
+
+        min-width: 100%;
+
+    }
+
+}

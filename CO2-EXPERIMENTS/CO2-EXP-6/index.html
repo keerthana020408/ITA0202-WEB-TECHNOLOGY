@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart To-Do List | Keerthana L</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h2>TaskFlow</h2>
+
+                    <span>SMART TO-DO MANAGER</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-info">
+
+                Keerthana L | B.Tech IT | 2nd Year
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <div class="container">
+
+
+            <!-- ================= HERO ================= -->
+
+            <section class="hero">
+
+                <div>
+
+                    <p class="tag">
+                        ✨ PRODUCTIVITY DASHBOARD
+                    </p>
+
+                    <h1>
+                        Organize Your
+                        <span>Day Better.</span>
+                    </h1>
+
+                    <p class="description">
+
+                        Add your tasks, manage your priorities
+                        and complete your daily goals with ease.
+
+                    </p>
+
+                </div>
+
+
+                <div class="hero-icon">
+
+                    📝
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= TODO CARD ================= -->
+
+            <section class="todo-card">
+
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p>
+                            TASK MANAGER
+                        </p>
+
+                        <h2>
+                            My Daily Tasks
+                        </h2>
+
+                    </div>
+
+
+                    <div class="task-count">
+
+                        <span id="taskCount">
+                            0
+                        </span>
+
+                        Tasks
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INPUT AREA -->
+
+                <div class="input-area">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you need to do?"
+                    >
+
+                    <select id="priorityInput">
+
+                        <option value="Low">
+                            Low Priority
+                        </option>
+
+                        <option value="Medium" selected>
+                            Medium Priority
+                        </option>
+
+                        <option value="High">
+                            High Priority
+                        </option>
+
+                    </select>
+
+
+                    <button id="addButton">
+
+                        + Add Task
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- FILTER -->
+
+                <div class="filter-area">
+
+                    <button
+                        class="filter active"
+                        data-filter="all">
+
+                        All
+
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="pending">
+
+                        Pending
+
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-filter="completed">
+
+                        Completed
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- TASK LIST -->
+
+                <ul id="taskList"></ul>
+
+
+
+                <!-- EMPTY MESSAGE -->
+
+                <div
+                    id="emptyMessage"
+                    class="empty-message">
+
+                    <div>
+                        📋
+                    </div>
+
+                    <h3>
+                        No tasks yet
+                    </h3>
+
+                    <p>
+                        Add your first task and start organizing your day.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= FEATURES ================= -->
+
+            <section class="features">
+
+
+                <div class="feature">
+
+                    <span>
+                        ➕
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Add
+                        </h3>
+
+                        <p>
+                            Create new tasks
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span>
+                        ✏️
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Edit
+                        </h3>
+
+                        <p>
+                            Update your tasks
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span>
+                        🗑️
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Delete
+                        </h3>
+
+                        <p>
+                            Remove completed tasks
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Complete
+                        </h3>
+
+                        <p>
+                            Track your progress
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Keerthana L |
+            B.Tech Information Technology |
+            SIMATS Engineering
+
+        </p>
+
+    </footer>
+
+
+
+    <script src="SCRIPT.JS"></script>
+
+</body>
+
+</html>
