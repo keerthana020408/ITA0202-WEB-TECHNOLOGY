@@ -1,1 +1,38 @@
+WEB TECHNOLOGY
+UNIT IV - REPRESENTING WEB DATA
+ASSESSMENT I: DATA INTERPRETATION
 
+QUESTION 4: INTERPRET THE EXTRACTED DATA
+
+a. Course with the highest enrollment:
+
+Artificial Intelligence (AI302)
+Students = 72
+
+b. Course with the lowest enrollment:
+
+Web Technology Laboratory (WEB303)
+Students = 36
+
+c. Number of Theory courses:
+
+There are 4 Theory courses.
+
+They are:
+1. Web Technology
+2. Artificial Intelligence
+3. Machine Learning
+4. Database Systems
+
+d. Courses having exactly 4 credits:
+
+1. Web Technology (WEB301)
+2. Artificial Intelligence (AI302)
+3. Machine Learning (ML304)
+
+e. Courses requiring additional teaching assistant support:
+
+Courses with more than 60 students require additional support.
+
+1. Artificial Intelligence (AI302) - 72 students
+2. Machine Learning (ML304) - 64 students
