@@ -1,1 +1,45 @@
+WEB TECHNOLOGY
+UNIT IV - REPRESENTING WEB DATA
+ASSESSMENT I: DATA INTERPRETATION
 
+QUESTION 2: APPLY XPATH FOR DATA SELECTION
+
+a. All course records:
+
+/courses/course
+
+b. Names of all courses:
+
+/courses/course/name
+
+c. Courses having more than 50 students:
+
+/courses/course[students > 50]
+
+d. Courses carrying 4 credits:
+
+/courses/course[credits = 4]
+
+e. Courses whose type is Theory:
+
+/courses/course[type = 'Theory']
+
+f. Names of Theory courses having more than 50 students:
+
+/courses/course[type = 'Theory' and students > 50]/name
+
+g. Faculty members handling courses with at least 4 credits:
+
+/courses/course[credits >= 4]/faculty
+
+h. The course whose id is C104:
+
+/courses/course[@id = 'C104']
+
+i. The first course available:
+
+/courses/course[1]
+
+j. The last course available:
+
+/courses/course[last()]
