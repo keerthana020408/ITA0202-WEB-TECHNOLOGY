@@ -1,1 +1,30 @@
+WEB TECHNOLOGY
+UNIT IV - REPRESENTING WEB DATA
+ASSESSMENT I: DATA INTERPRETATION
 
+QUESTION 1: INTERPRET THE XML STRUCTURE
+
+a. Root Element:
+The root element is <courses>.
+
+b. Repeating Record Element:
+The repeating record element is <course>.
+
+c. Attribute Used to Uniquely Identify Each Course:
+The attribute is "id".
+
+Examples: C101, C102, C103, C104, C105.
+
+d. Elements Representing Numeric Information:
+The numeric elements are:
+1. <students>
+2. <credits>
+
+e. Well-Formed XML:
+Yes, the XML document is well-formed.
+
+Justification:
+- It has one root element <courses>.
+- All opening tags have matching closing tags.
+- Elements are properly nested.
+- The id attribute values are properly enclosed in quotation marks.
