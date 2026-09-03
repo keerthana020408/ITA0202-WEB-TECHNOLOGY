@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- Registration Form -->
+        <div class="registration-card">
+
+            <div class="logo">
+                <div class="logo-icon">🎓</div>
+                <div>
+                    <h1>Student<span>Hub</span></h1>
+                    <p>Registration Portal</p>
+                </div>
+            </div>
+
+            <div class="welcome">
+                <h2>Create Your Profile</h2>
+                <p>Enter your details to generate your student profile.</p>
+            </div>
+
+            <div class="form-group">
+                <label>👤 Student Name</label>
+                <input type="text" id="studentName"
+                    placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label>🆔 Register Number</label>
+                <input type="text" id="registerNumber"
+                    placeholder="Enter register number">
+            </div>
+
+            <div class="form-group">
+                <label>💻 Department</label>
+                <input type="text" id="department"
+                    placeholder="Enter department">
+            </div>
+
+            <div class="form-group">
+                <label>📚 Year of Study</label>
+
+                <select id="year">
+                    <option value="">Select your year</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="4th Year">4th Year</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+
+                <button id="displayBtn" class="display-btn">
+                    ✨ Display Profile
+                </button>
+
+                <button id="removeBtn" class="remove-btn">
+                    🗑️ Remove
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Profile Preview -->
+        <div class="preview-section">
+
+            <div class="preview-title">
+                <span class="status-dot"></span>
+                LIVE PROFILE PREVIEW
+            </div>
+
+            <div id="profileArea">
+
+                <div class="empty-profile">
+
+                    <div class="empty-icon">
+                        👤
+                    </div>
+
+                    <h3>Your Profile Appears Here</h3>
+
+                    <p>
+                        Fill in your details and click
+                        <strong>Display Profile</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
